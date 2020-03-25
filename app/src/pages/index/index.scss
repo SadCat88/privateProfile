@@ -1,5 +1,16 @@
+.case {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 100%;
+  max-width: 1001px;
+
+  margin: 20px 0;
+  padding: 0 40px;
+}
+
 .container {
-  margin-top: 20px;
   padding-top: 48px;
   overflow: hidden;
 }
@@ -81,12 +92,33 @@ label,
 }
 
 .field-checkbox {
+  margin-bottom: 27px;
+
   .form__heading {
     margin-bottom: 6px;
   }
 
   .form__description {
-    margin-bottom: 15px;
+    margin-bottom: 27px;
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 757px;
+
+    .checkbox-group-1 {
+      flex-grow: 1;
+    }
+
+    .checkbox-group-2 {
+      flex-grow: 1.6;
+    }
+
+    .input-checkbox {
+      margin-bottom: 8px;
+      margin-right: 15px;
+    }
   }
 }
 
@@ -96,6 +128,8 @@ label,
   justify-content: space-between;
 
   .label {
+    cursor: pointer;
+
     &::after {
       content: "";
 
@@ -120,44 +154,50 @@ label,
   }
 }
 
-.case {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-
-  width: 100%;
-  max-width: 1001px;
+.input-checkbox {
 
 
-  background: URL('../-common/img/pattern-middle.jpg') repeat-y;
-  background-size: 100%;
-
-
-  &::before {
-    content: "";
-
+  .input {
     position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 61px;
+    left: -9999px;
 
-    background: URL('../-common/img/pattern-top.jpg') no-repeat top;
-    background-size: 100%;
+    &:checked+.label::after {
+      content: "";
+    }
   }
 
-  &::after {
-    content: "";
 
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 61px;
 
-    background: URL('../-common/img/pattern-bottom.jpg') no-repeat bottom;
-    background-size: 100%;
+  .label {
+    position: relative;
+
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      position: relative;
+      top: 3px;
+
+      display: inline-block;
+      margin-right: 10px;
+      width: 19px;
+      height: 18px;
+
+      background: URL('../-common/img/checkbox-box.png') no-repeat center center;
+    }
+
+    &::after {
+
+      position: absolute;
+      top: -4px;
+      left: 4px;
+
+      display: inline-block;
+      width: 21px;
+      height: 27px;
+
+      background: URL('../-common/img/checkbox-check.png') no-repeat center center;
+    }
   }
 }

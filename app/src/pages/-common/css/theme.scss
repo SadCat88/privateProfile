@@ -49,15 +49,58 @@ label,
     font-size: 14.88px;
     line-height: 1.55;
   }
+
+  .input-checkbox {
+    .label {
+      font-size: 21px;
+    }
+  }
+}
+
+.field-slider {
+  .form__heading {
+    font-size: 24px;
+  }
 }
 
 // =============================================================================
 
 // === background ==============================================================
-.container {
-  // background: URL('../img/pattern-middle.jpg') repeat-y;
-}
 
 body {
   background: URL('../img/pattern_bg.jpg') repeat;
+}
+
+.case {
+  background: URL('../../-common/img/pattern-middle.jpg') repeat-y;
+  background-size: 100%;
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 61px;
+
+    background: URL('../../-common/img/pattern-top.jpg') no-repeat top;
+    background-size: 100%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 61px;
+
+    background: URL('../../-common/img/pattern-bottom.jpg') no-repeat bottom;
+    background-size: 100%;
+  }
 }

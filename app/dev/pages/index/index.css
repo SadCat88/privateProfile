@@ -1,5 +1,13 @@
+.case {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  max-width: 1001px;
+  margin: 20px 0;
+  padding: 0 40px; }
+
 .container {
-  margin-top: 20px;
   padding-top: 48px;
   overflow: hidden; }
 
@@ -48,56 +56,68 @@ label,
     position: relative;
     top: 16px; }
 
-.field-checkbox .form__heading {
-  margin-bottom: 6px; }
-
-.field-checkbox .form__description {
-  margin-bottom: 15px; }
+.field-checkbox {
+  margin-bottom: 27px; }
+  .field-checkbox .form__heading {
+    margin-bottom: 6px; }
+  .field-checkbox .form__description {
+    margin-bottom: 27px; }
+  .field-checkbox .checkbox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 757px; }
+    .field-checkbox .checkbox-wrapper .checkbox-group-1 {
+      flex-grow: 1; }
+    .field-checkbox .checkbox-wrapper .checkbox-group-2 {
+      flex-grow: 1.6; }
+    .field-checkbox .checkbox-wrapper .input-checkbox {
+      margin-bottom: 8px;
+      margin-right: 15px; }
 
 .input-text {
   display: flex;
   justify-content: space-between; }
-  .input-text .label::after {
-    content: "";
-    position: absolute;
-    top: 24px;
-    right: -15px;
-    transform: translate(100%);
-    height: 3px;
-    width: 700px;
-    background: URL("../-common/img/pattern-line.png") repeat-x; }
+  .input-text .label {
+    cursor: pointer; }
+    .input-text .label::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: -15px;
+      transform: translate(100%);
+      height: 3px;
+      width: 700px;
+      background: URL("../-common/img/pattern-line.png") repeat-x; }
   .input-text .input {
     flex-grow: 1;
     border: none;
     background: none; }
 
-.case {
+.input-checkbox .input {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  width: 100%;
-  max-width: 1001px;
-  background: URL("../-common/img/pattern-middle.jpg") repeat-y;
-  background-size: 100%; }
-  .case::before {
+  left: -9999px; }
+  .input-checkbox .input:checked + .label::after {
+    content: ""; }
+
+.input-checkbox .label {
+  position: relative;
+  cursor: pointer; }
+  .input-checkbox .label::before {
     content: "";
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 19px;
+    height: 18px;
+    background: URL("../-common/img/checkbox-box.png") no-repeat center center; }
+  .input-checkbox .label::after {
     position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 61px;
-    background: URL("../-common/img/pattern-top.jpg") no-repeat top;
-    background-size: 100%; }
-  .case::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 61px;
-    background: URL("../-common/img/pattern-bottom.jpg") no-repeat bottom;
-    background-size: 100%; }
+    top: -4px;
+    left: 4px;
+    display: inline-block;
+    width: 21px;
+    height: 27px;
+    background: URL("../-common/img/checkbox-check.png") no-repeat center center; }
 
 /*# sourceMappingURL=index.css.map */
