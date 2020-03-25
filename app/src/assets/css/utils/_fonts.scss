@@ -1,0 +1,39 @@
+// === пути к шрифтам (относительно файла base.scss)
+// потому что все правила @font-face подключены туда
+// =============================================================================
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PT Sans Regular'),
+    url('../../../assets/fonts/ptsans-regular.eot?#iefix') format('embedded-opentype'),
+    url('../../../assets/fonts/ptsans-regular.woff2') format('woff2'),
+    url('../../../assets/fonts/ptsans-regular.woff') format('woff'),
+    url('../../../assets/fonts/ptsans-regular.ttf') format('truetype'),
+    url('../../../assets/fonts/ptsans-regular.svg#pt_sansregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PT Sans Bold'),
+    url('../../../assets/fonts/ptsans-bold.eot?#iefix') format('embedded-opentype'),
+    url('../../../assets/fonts/ptsans-bold.woff2') format('woff2'),
+    url('../../../assets/fonts/ptsans-bold.woff') format('woff'),
+    url('../../../assets/fonts/ptsans-bold.ttf') format('truetype'),
+    url('../../../assets/fonts/ptsans-bold.svg#pt_sansbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Courier New';
+  src: local('Courier New'), local('Courier New Regular'),
+    url('../../../assets/fonts/courier-new.eot?#iefix') format('embedded-opentype'),
+    url('../../../assets/fonts/courier-new.woff2') format('woff2'),
+    url('../../../assets/fonts/courier-new.woff') format('woff'),
+    url('../../../assets/fonts/courier-new.ttf') format('truetype'),
+    url('../../../assets/fonts/courier-new.svg#courier_newregular') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,34 @@
+.case-logotype-link .case-logotype__img {
+  opacity: 0.9; }
+
+label,
+.form__heading {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  color: #2f1b15; }
+
+.form__description {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400; }
+
+.input {
+  font-family: 'Courier New', serif; }
+
+.field-text .label {
+  font-size: 22.5px;
+  color: #2f1b15; }
+
+.field-text .input {
+  font-size: 30px; }
+
+.field-checkbox .form__heading {
+  font-size: 24px; }
+
+.field-checkbox .form__description {
+  font-size: 14.88px;
+  line-height: 1.55; }
+
+body {
+  background: URL("../img/pattern_bg.jpg") repeat; }
+
+/*# sourceMappingURL=theme.css.map */
