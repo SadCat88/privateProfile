@@ -1,0 +1,115 @@
+//- include pages/index/_index.jade
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" )
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="shortcut icon" href="./favicon.ico")
+    //- link(rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.css")
+    //- link(rel="stylesheet" href="./assets/css/theme.css")
+    title Сварочные технологии
+
+  body
+    a(href="http://io-group.ru/" title="io-group.ru")
+      img.case__logotype(src="./pages/_common/img/logotype.png" alt="iO-Group logotype")
+    img.case__heading(src="./pages/_common/img/case.jpg" alt="Case")
+
+
+    form.form(method="post" action="https://echo.htmlacademy.ru")
+
+      //- text inputs ==========================================================
+      label.form__label(for="fullName") Полное ФИО
+      input.form__input(type="text" name="full-name" value="Коношенко Павел Александрович" required)#fullName
+
+      label.form__label(for="yearOfBirth") Год рождения
+      input.form__input(type="text" name="year-of-birth" value="1988" required)#yearOfBirth
+
+      label.form__label(for="residence") Место жительства
+      input.form__input(type="text" name="residence" value="г. Брянск" required)#residence
+
+      label.form__label(for="loginSkype") Скайп
+      input.form__input(type="text" name="login-skype" value="konoshenko.pavel" required)#loginSkype
+
+      label.form__label(for="eMail") Почта
+      input.form__input(type="text" name="e-mail" value="konoshenko.pavel@mail.ru" required)#eMail
+      //- ======================================================================
+
+
+
+
+
+      //- checkbox input =======================================================
+      p.checkbox__heading.
+        Расскажите о себе чекбоксами  
+      p.checkbox__description.
+        Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. 
+        Отсутствие опыта не означает, что у вас меньше шансов стать одним 
+        из наших товарищей. Это означает, что вы будете получать те задачи, 
+        с которыми гарантировано будете справляться.
+
+      input(type="checkbox" name="skills" value="HTML" checked)#HTML
+      label(for="HTML") HTML
+      //- 
+      input(type="checkbox" name="skills" value="CSS" checked)#CSS
+      label(for="HTML") CSS
+      //- 
+      input(type="checkbox" name="skills" value="SASS" checked)#SASS
+      label(for="SASS") SCSS (SASS)
+      //- 
+      input(type="checkbox" name="skills" value="BEM" checked)#BEM
+      label(for="BEM") БЭМ
+      //- 
+      input(type="checkbox" name="skills" value="JQuery" checked)#JQuery
+      label(for="JQuery") JQuery
+      //- 
+      input(type="checkbox" name="skills" value="VueJS")#VueJS
+      label(for="VueJS") Vue.js
+      //- 
+      input(type="checkbox" name="skills" value="NuxtJS")#NuxtJS
+      label(for="NuxtJS") Nuxt.js
+      //- 
+      input(type="checkbox" name="skills" value="Git" checked)#Git
+      label(for="Git") Git
+      //- 
+      input(type="checkbox" name="skills" value="adaptive" checked)#adaptive
+      label(for="adaptive") Адаптивная верстка
+      //- 
+      input(type="checkbox" name="skills" value="layoutPost")#layoutPost
+      label(for="layoutPost") Верстка писем
+      //- 
+      input(type="checkbox" name="skills" value="PHP")#PHP
+      label(for="PHP") PHP
+      //- 
+      input(type="checkbox" name="skills" value="MySql")#MySql
+      label(for="MySql") MySql
+      //- ======================================================================
+
+
+
+
+
+      //- slider input =========================================================
+      p.slider__heading Уровень владения JavaScript
+      input(type="range")
+
+      //- ======================================================================
+
+
+
+
+      //- date input ===========================================================
+      label.form__label(for="dateOfCompletion") Дата заполнения
+      input.form__input(type="date" name="date-of-completion" value="2020-03-25" required)#dateOfCompletion
+      //- ======================================================================
+      input(type="submit" value="Отправить")
+
+
+
+
+
+
+    script(src="./assets/vendors/jquery/jquery-3.4.1.slim.min.js")
+    script(src="./assets/vendors/bootstrap/js/bootstrap.min.js")
+
+    script(src="./index.js")
