@@ -11,7 +11,8 @@
 
 // === PT Sans Bold
 label,
-.form__heading {
+.form__heading,
+.range-legends {
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
 
@@ -27,6 +28,7 @@ label,
 // === Courier New Regular
 .input {
   font-family: 'Courier New', serif;
+  color: $colorFontInput;
 }
 
 .field-text {
@@ -60,6 +62,21 @@ label,
 .field-slider {
   .form__heading {
     font-size: 24px;
+  }
+
+  .range-legends {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+.field-date {
+  .label {
+    font-size: 22.5px;
+  }
+
+  .input {
+    font-size: 30px;
   }
 }
 

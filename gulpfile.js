@@ -89,18 +89,21 @@ gulp.task('dev-copy-files', function() {
   // для переноса всех стандартных файлов из папки src в dev
   return (
     gulp
-      .src([
-        `./${path.root}/${path.src}/**/*.+(html|css|js|map)`,
-        `!./${path.root}/${path.src}/assets/vendors/source/**`,
-        // web files
-        `./${path.root}/${path.src}/**/*.+(jpeg|jpg|JPG|png|svg|gif|ico)`,
-        // images
-        `./${path.root}/${path.src}/**/*.+(eot|ttf|woff|woff2)`,
-        // fonts
-        `!./${path.root}/${path.src}/assets/icons/**`,
-        // icons
-      ])
-      .pipe(newer(`./${path.root}/${path.dev}`))
+      .src(
+        [
+          `./${path.root}/${path.src}/**/*.+(html|css|js|map)`,
+          `!./${path.root}/${path.src}/assets/vendors/source/**`,
+          // web files
+          `./${path.root}/${path.src}/**/*.+(jpeg|jpg|JPG|png|svg|gif|ico)`,
+          // images
+          `./${path.root}/${path.src}/**/*.+(eot|ttf|woff|woff2)`,
+          // fonts
+          `!./${path.root}/${path.src}/assets/icons/**`,
+          // icons
+        ],
+        { since: gulp.lastRun('dev-copy-files') }
+      )
+      // .pipe(newer(`./${path.root}/${path.dev}`))
       // только те, которые уже не лежат в приемнике
       .pipe(debug({ title: '= copy:' }))
       .pipe(gulp.dest(`./${path.root}/${path.dev}`))
@@ -1209,104 +1212,104 @@ gulp.task(
   // 			.pipe(gulp.dest('./app/dev'))
   // 	);
   // });
-  // 
+  //
   // === полное описание минификации
-//   .pipe(
-//     cleanCSS(
-//       {
-//         compatibility: 'ie8',
-//         // режим совместимость с ie8
-//         debug: true,
-//         // выводит логи в консоль
-//         level: {
-//           // уровень оптимизации
-//           1: {
-//             // список первого уровня оптимизации
-//             // === включить все опции из списка 1 уровня
-//             all: true,
-//             // === перемещает @charset в начало файла
-//             // cleanupCharsets: true,
-//             // === приведение URL к общему виду
-//             normalizeUrls: false,
-//             // optimizeBackground: true,
-//             // optimizeBorderRadius: true,
-//             // optimizeFilter: true,
-//             // optimizeFont: true,
-//             // optimizeFontWeight : true,
-//             // optimizeOutline: true,
-//             // === удаление пустых правил и вложенных блоков
-//             // removeEmpty: true,
-//             // === удаление отрицательных paddings
-//             // removeNegativePaddings: true,
-//             // === удаляет кавычки, когда они не нужны
-//             // removeQuotes: true,
-//             // === удаление ненужных пробелов
-//             // removeWhitespace : true,
-//             // === удаляет избыточные нули
-//             // replaceMultipleZeros: true
-//             // === укорачивает единицы времени
-//             // replaceTimeUnits: true,
-//             // === заменяет нулевые единицы измерения
-//             // replaceZeroUnits: true,
-//             // === округляет пиксели до десятичных знаков
-//             // roundingPrecision : false,
-//             // === метод сортировки селекторов
-//             // 'natural'
-//             // 'standard'
-//             // 'none'
-//             // false
-//             // selectorsSortingMethod : 'standard',
-//             // === число сохраняемых специальных комментариев, типа / *! ... * /
-//             // specialComments: ' all '
-//             // === оптимизация правил с собакой @
-//             // tidyAtRules: true,
-//             // === оптимизация областей действия @media
-//             // tidyBlockScopes: true,
-//             // === оптимизация селекторов
-//             // tidySelectors: true,
-//             // === функция для callback, нужна для отладки
-//             // transform: function () {}
-//           },
-//           2: {
-//             // список второго уровня минификации
-//             // === включить все опции из списка 2 уровня
-//             all: true,
-//             // === слияние соседних правил
-//             // mergeAdjacentRules: true,
-//             // === слияние в короткие строки ???
-//             // mergeIntoShorthands : true,
-//             // === слияние @media
-//             // mergeMedia: true,
-//             // === слияние не соседних правил
-//             mergeNonAdjacentRules: false,
-//             // === семантическое слияние
-//             // mergeSemantically : false ,
-//             // === переопределяет свойства на основе понятности
-//             // overrideProperties: true,
-//             // === удаление пустых правил и вложенных блоков
-//             // removeEmpty: true,
-//             // === уменьшает сокращение несоседних правил
-//             // reduNonAdjacentRules: true,
-//             // === удаление дубликатов @font-face
-//             // removeDuplicateFontRules: true,
-//             // === удаление дубликатов @media
-//             // removeDuplicateMediaBlocks: true,
-//             // === удаление дубликатов правил
-//             // removeDuplicateRules: true,
-//             // === удаление неиспользуемых свойств
-//             removeUnusedAtRules: false,
-//             // === произвести реструктуризацию слияние одного и того же селектора из разных мест
-//             // restructureRules: false
-//             // определение свойств, которые не будут оптимизироваться
-//             // skipProperties: []
-//           },
-//         },
-//       },
-//       (details) => {
-//         // вывод логов
-//         console.log(`${details.name}: ${details.stats.originalSize}`);
-//         console.log(`${details.name}: ${details.stats.minifiedSize}`);
-//       }
-//     )
-//   )
+  //   .pipe(
+  //     cleanCSS(
+  //       {
+  //         compatibility: 'ie8',
+  //         // режим совместимость с ie8
+  //         debug: true,
+  //         // выводит логи в консоль
+  //         level: {
+  //           // уровень оптимизации
+  //           1: {
+  //             // список первого уровня оптимизации
+  //             // === включить все опции из списка 1 уровня
+  //             all: true,
+  //             // === перемещает @charset в начало файла
+  //             // cleanupCharsets: true,
+  //             // === приведение URL к общему виду
+  //             normalizeUrls: false,
+  //             // optimizeBackground: true,
+  //             // optimizeBorderRadius: true,
+  //             // optimizeFilter: true,
+  //             // optimizeFont: true,
+  //             // optimizeFontWeight : true,
+  //             // optimizeOutline: true,
+  //             // === удаление пустых правил и вложенных блоков
+  //             // removeEmpty: true,
+  //             // === удаление отрицательных paddings
+  //             // removeNegativePaddings: true,
+  //             // === удаляет кавычки, когда они не нужны
+  //             // removeQuotes: true,
+  //             // === удаление ненужных пробелов
+  //             // removeWhitespace : true,
+  //             // === удаляет избыточные нули
+  //             // replaceMultipleZeros: true
+  //             // === укорачивает единицы времени
+  //             // replaceTimeUnits: true,
+  //             // === заменяет нулевые единицы измерения
+  //             // replaceZeroUnits: true,
+  //             // === округляет пиксели до десятичных знаков
+  //             // roundingPrecision : false,
+  //             // === метод сортировки селекторов
+  //             // 'natural'
+  //             // 'standard'
+  //             // 'none'
+  //             // false
+  //             // selectorsSortingMethod : 'standard',
+  //             // === число сохраняемых специальных комментариев, типа / *! ... * /
+  //             // specialComments: ' all '
+  //             // === оптимизация правил с собакой @
+  //             // tidyAtRules: true,
+  //             // === оптимизация областей действия @media
+  //             // tidyBlockScopes: true,
+  //             // === оптимизация селекторов
+  //             // tidySelectors: true,
+  //             // === функция для callback, нужна для отладки
+  //             // transform: function () {}
+  //           },
+  //           2: {
+  //             // список второго уровня минификации
+  //             // === включить все опции из списка 2 уровня
+  //             all: true,
+  //             // === слияние соседних правил
+  //             // mergeAdjacentRules: true,
+  //             // === слияние в короткие строки ???
+  //             // mergeIntoShorthands : true,
+  //             // === слияние @media
+  //             // mergeMedia: true,
+  //             // === слияние не соседних правил
+  //             mergeNonAdjacentRules: false,
+  //             // === семантическое слияние
+  //             // mergeSemantically : false ,
+  //             // === переопределяет свойства на основе понятности
+  //             // overrideProperties: true,
+  //             // === удаление пустых правил и вложенных блоков
+  //             // removeEmpty: true,
+  //             // === уменьшает сокращение несоседних правил
+  //             // reduNonAdjacentRules: true,
+  //             // === удаление дубликатов @font-face
+  //             // removeDuplicateFontRules: true,
+  //             // === удаление дубликатов @media
+  //             // removeDuplicateMediaBlocks: true,
+  //             // === удаление дубликатов правил
+  //             // removeDuplicateRules: true,
+  //             // === удаление неиспользуемых свойств
+  //             removeUnusedAtRules: false,
+  //             // === произвести реструктуризацию слияние одного и того же селектора из разных мест
+  //             // restructureRules: false
+  //             // определение свойств, которые не будут оптимизироваться
+  //             // skipProperties: []
+  //           },
+  //         },
+  //       },
+  //       (details) => {
+  //         // вывод логов
+  //         console.log(`${details.name}: ${details.stats.originalSize}`);
+  //         console.log(`${details.name}: ${details.stats.minifiedSize}`);
+  //       }
+  //     )
+  //   )
 }

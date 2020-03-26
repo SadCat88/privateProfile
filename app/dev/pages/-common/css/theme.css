@@ -2,7 +2,8 @@
   opacity: 0.9; }
 
 label,
-.form__heading {
+.form__heading,
+.range-legends {
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   color: #2f1b15; }
@@ -12,7 +13,8 @@ label,
   font-weight: 400; }
 
 .input {
-  font-family: 'Courier New', serif; }
+  font-family: 'Courier New', serif;
+  color: #231f20; }
 
 .field-text .label {
   font-size: 22.5px;
@@ -33,6 +35,16 @@ label,
 
 .field-slider .form__heading {
   font-size: 24px; }
+
+.field-slider .range-legends {
+  font-size: 13px;
+  line-height: 1.6; }
+
+.field-date .label {
+  font-size: 22.5px; }
+
+.field-date .input {
+  font-size: 30px; }
 
 body {
   background: URL("../img/pattern_bg.jpg") repeat; }

@@ -8,8 +8,7 @@
   padding: 0 40px; }
 
 .container {
-  padding-top: 48px;
-  overflow: hidden; }
+  padding-top: 48px; }
 
 .case-logotype {
   margin-bottom: 24px;
@@ -24,10 +23,14 @@
 
 label,
 .form__heading {
-  white-space: nowrap; }
+  white-space: nowrap;
+  user-select: none; }
 
 .field-text {
-  margin-bottom: 72px; }
+  margin-bottom: 60px;
+  padding-bottom: 12px;
+  max-width: 772px;
+  overflow: hidden; }
   .field-text .input-text .label {
     margin-right: 15px; }
   .field-text .input-text .input {
@@ -61,7 +64,8 @@ label,
   .field-checkbox .form__heading {
     margin-bottom: 6px; }
   .field-checkbox .form__description {
-    margin-bottom: 27px; }
+    margin-bottom: 27px;
+    user-select: none; }
   .field-checkbox .checkbox-wrapper {
     display: flex;
     justify-content: space-between;
@@ -73,6 +77,32 @@ label,
     .field-checkbox .checkbox-wrapper .input-checkbox {
       margin-bottom: 8px;
       margin-right: 15px; }
+
+.field-slider .form__heading {
+  margin-bottom: 41px; }
+
+.field-slider .range {
+  margin-bottom: 26px; }
+
+.field-slider .range-legends {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px; }
+  .field-slider .range-legends .item-wrapper {
+    max-width: 168px; }
+  .field-slider .range-legends .item-1 {
+    flex-grow: 2.8; }
+  .field-slider .range-legends .item-2 {
+    flex-grow: 1.5;
+    margin: 0 10px; }
+  .field-slider .range-legends .item-3 {
+    flex-grow: 3;
+    margin: 0 10px; }
+  .field-slider .range-legends .item-last {
+    padding-top: 5px; }
+
+.field-date {
+  margin-bottom: 162px; }
 
 .input-text {
   display: flex;
@@ -119,5 +149,68 @@ label,
     width: 21px;
     height: 27px;
     background: URL("../-common/img/checkbox-check.png") no-repeat center center; }
+
+.input-date {
+  position: relative;
+  display: flex; }
+  .input-date .label {
+    position: relative;
+    top: 20px;
+    margin-right: 15px; }
+  .input-date .input-wrapper {
+    max-width: 205px;
+    overflow: hidden; }
+    .input-date .input-wrapper::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      max-width: 205px;
+      background-color: #4b1a4d; }
+    .input-date .input-wrapper .input {
+      border: none;
+      background: none;
+      height: 45px;
+      padding-left: 10px; }
+
+.line {
+  position: absolute;
+  background-color: #4b1a4d; }
+  .line.line-1 {
+    left: 0;
+    width: 2px;
+    height: 26px; }
+  .line.line-2 {
+    left: 19.5%;
+    width: 2px;
+    height: 14px; }
+  .line.line-3 {
+    left: 48.7%;
+    width: 2px;
+    height: 14px; }
+  .line.line-last {
+    right: 0;
+    width: 2px;
+    height: 26px; }
+
+.noUi-handle {
+  margin-top: -15px;
+  cursor: pointer; }
+  .noUi-handle:focus {
+    outline: none; }
+  .noUi-handle:before {
+    width: 0;
+    height: 0;
+    border: 13px solid #ffffff;
+    border-top-color: #4b1a4d;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-bottom-width: 0;
+    border-left-color: transparent;
+    border-right-color: transparent; }
+
+.noUi-target {
+  background-color: #4b1a4d; }
 
 /*# sourceMappingURL=index.css.map */
