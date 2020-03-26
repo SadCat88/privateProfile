@@ -35,16 +35,44 @@ label,
   .label {
     font-size: 22.5px;
     color: $colorFontHeading;
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 470px) {
+      font-size: 15px;
+    }
   }
 
   .input {
     font-size: 30px;
+
+    @media (max-width: 780px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 680px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 470px) {
+      font-size: 14px;
+    }
   }
 }
 
 .field-checkbox {
   .form__heading {
     font-size: 24px;
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
   }
 
   .form__description {
@@ -55,13 +83,39 @@ label,
   .input-checkbox {
     .label {
       font-size: 21px;
+
+      @media (max-width: 600px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 440px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 390px) {
+        font-size: 13px;
+      }
     }
   }
 }
 
 .field-slider {
+  .range {
+    .line {
+      background-color: $colorLine;
+    }
+  }
+
   .form__heading {
     font-size: 24px;
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
   }
 
   .range-legends {
@@ -73,14 +127,34 @@ label,
 .field-date {
   .label {
     font-size: 22.5px;
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 340px) {
+      font-size: 16px;
+    }
   }
 
   .input {
     font-size: 30px;
+
+    @media (max-width: 750px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
   }
 }
 
 // =============================================================================
+
+
+
+
 
 // === background ==============================================================
 
@@ -121,3 +195,5 @@ body {
     background-size: 100%;
   }
 }
+
+// =============================================================================

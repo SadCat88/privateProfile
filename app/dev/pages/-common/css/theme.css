@@ -19,12 +19,33 @@ label,
 .field-text .label {
   font-size: 22.5px;
   color: #2f1b15; }
+  @media (max-width: 600px) {
+    .field-text .label {
+      font-size: 18px; } }
+  @media (max-width: 470px) {
+    .field-text .label {
+      font-size: 15px; } }
 
 .field-text .input {
   font-size: 30px; }
+  @media (max-width: 780px) {
+    .field-text .input {
+      font-size: 24px; } }
+  @media (max-width: 680px) {
+    .field-text .input {
+      font-size: 18px; } }
+  @media (max-width: 500px) {
+    .field-text .input {
+      font-size: 16px; } }
+  @media (max-width: 470px) {
+    .field-text .input {
+      font-size: 14px; } }
 
 .field-checkbox .form__heading {
   font-size: 24px; }
+  @media (max-width: 600px) {
+    .field-checkbox .form__heading {
+      font-size: 18px; } }
 
 .field-checkbox .form__description {
   font-size: 14.88px;
@@ -32,9 +53,27 @@ label,
 
 .field-checkbox .input-checkbox .label {
   font-size: 21px; }
+  @media (max-width: 600px) {
+    .field-checkbox .input-checkbox .label {
+      font-size: 18px; } }
+  @media (max-width: 500px) {
+    .field-checkbox .input-checkbox .label {
+      font-size: 16px; } }
+  @media (max-width: 440px) {
+    .field-checkbox .input-checkbox .label {
+      font-size: 14px; } }
+  @media (max-width: 390px) {
+    .field-checkbox .input-checkbox .label {
+      font-size: 13px; } }
+
+.field-slider .range .line {
+  background-color: #4b1a4d; }
 
 .field-slider .form__heading {
   font-size: 24px; }
+  @media (max-width: 600px) {
+    .field-slider .form__heading {
+      font-size: 18px; } }
 
 .field-slider .range-legends {
   font-size: 13px;
@@ -42,9 +81,21 @@ label,
 
 .field-date .label {
   font-size: 22.5px; }
+  @media (max-width: 600px) {
+    .field-date .label {
+      font-size: 18px; } }
+  @media (max-width: 340px) {
+    .field-date .label {
+      font-size: 16px; } }
 
 .field-date .input {
   font-size: 30px; }
+  @media (max-width: 750px) {
+    .field-date .input {
+      font-size: 24px; } }
+  @media (max-width: 600px) {
+    .field-date .input {
+      font-size: 18px; } }
 
 body {
   background: URL("../img/pattern_bg.jpg") repeat; }

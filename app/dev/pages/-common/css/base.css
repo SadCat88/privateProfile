@@ -16,17 +16,6 @@
   font-weight: 700;
   font-style: normal; }
 
-.center-line-temporality {
-  position: fixed;
-  z-index: 2000;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 600vw;
-  border-left: 1px dashed green;
-  border-right: 1px dashed red; }
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

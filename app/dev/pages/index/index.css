@@ -6,20 +6,34 @@
   max-width: 1001px;
   margin: 20px 0;
   padding: 0 40px; }
+  @media (max-width: 540px) {
+    .case {
+      padding: 0 20px; } }
 
 .container {
   padding-top: 48px; }
+  @media (max-width: 680px) {
+    .container {
+      padding-top: 15px; } }
 
 .case-logotype {
   margin-bottom: 24px;
   display: block;
   width: 77px;
   height: 77px; }
+  @media (max-width: 680px) {
+    .case-logotype {
+      margin-bottom: 0;
+      width: 15%; } }
 
 .case__heading {
   display: block;
   margin: 0 auto 52px;
   padding-left: 10px; }
+  @media (max-width: 680px) {
+    .case__heading {
+      margin: 0 auto;
+      width: 50%; } }
 
 label,
 .form__heading {
@@ -27,14 +41,33 @@ label,
   user-select: none; }
 
 .field-text {
-  margin-bottom: 60px;
-  padding-bottom: 12px;
+  margin-bottom: 30px;
+  padding-bottom: 42px;
   max-width: 772px;
   overflow: hidden; }
+  @media (max-width: 405px) {
+    .field-text .input-text {
+      display: flex;
+      flex-direction: column; }
+      .field-text .input-text .label {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center; } }
   .field-text .input-text .label {
     margin-right: 15px; }
+    @media (max-width: 415px) {
+      .field-text .input-text .label {
+        margin-right: 5px; } }
   .field-text .input-text .input {
+    position: relative;
     padding: 0 0 0 11px; }
+    @media (max-width: 680px) {
+      .field-text .input-text .input {
+        top: 10px; } }
+    @media (max-width: 500px) {
+      .field-text .input-text .input {
+        top: 15px; } }
   .field-text .input-text.full-name {
     margin-bottom: 32px; }
     .field-text .input-text.full-name .label {
@@ -45,6 +78,9 @@ label,
     .field-text .input-text.year-of-birth .label {
       position: relative;
       top: 10px; }
+      @media (max-width: 405px) {
+        .field-text .input-text.year-of-birth .label {
+          top: 15px; } }
   .field-text .input-text.residence {
     margin-bottom: 31px; }
     .field-text .input-text.residence .label {
@@ -77,32 +113,62 @@ label,
     .field-checkbox .checkbox-wrapper .input-checkbox {
       margin-bottom: 8px;
       margin-right: 15px; }
+      @media (max-width: 680px) {
+        .field-checkbox .checkbox-wrapper .input-checkbox {
+          margin-right: 5px; } }
 
 .field-slider .form__heading {
   margin-bottom: 41px; }
+  @media (max-width: 680px) {
+    .field-slider .form__heading {
+      margin-bottom: 20px; } }
 
-.field-slider .range {
+.range {
   margin-bottom: 26px; }
+  .range .line {
+    position: absolute; }
+    .range .line.line-1 {
+      left: 0;
+      width: 2px;
+      height: 26px; }
+    .range .line.line-2 {
+      left: 19.5%;
+      width: 2px;
+      height: 14px; }
+    .range .line.line-3 {
+      left: 48.7%;
+      width: 2px;
+      height: 14px; }
+    .range .line.line-last {
+      right: 0;
+      width: 2px;
+      height: 26px; }
 
-.field-slider .range-legends {
+.range-legends {
   display: flex;
   justify-content: space-between;
   margin-bottom: 28px; }
-  .field-slider .range-legends .item-wrapper {
+  .range-legends .item-wrapper {
     max-width: 168px; }
-  .field-slider .range-legends .item-1 {
+  .range-legends .item-1 {
     flex-grow: 2.8; }
-  .field-slider .range-legends .item-2 {
+  .range-legends .item-2 {
     flex-grow: 1.5;
     margin: 0 10px; }
-  .field-slider .range-legends .item-3 {
+  .range-legends .item-3 {
     flex-grow: 3;
     margin: 0 10px; }
-  .field-slider .range-legends .item-last {
+  .range-legends .item-last {
     padding-top: 5px; }
 
 .field-date {
   margin-bottom: 162px; }
+  @media (max-width: 900px) {
+    .field-date {
+      margin-bottom: 100px; } }
+  @media (max-width: 680px) {
+    .field-date {
+      margin-bottom: 50px; } }
 
 .input-text {
   display: flex;
@@ -118,6 +184,11 @@ label,
       height: 3px;
       width: 700px;
       background: URL("../-common/img/pattern-line.png") repeat-x; }
+      @media (max-width: 405px) {
+        .input-text .label::after {
+          top: 45px;
+          left: 0;
+          transform: translate(0); } }
   .input-text .input {
     flex-grow: 1;
     border: none;
@@ -141,6 +212,14 @@ label,
     width: 19px;
     height: 18px;
     background: URL("../-common/img/checkbox-box.png") no-repeat center center; }
+    @media (max-width: 440px) {
+      .input-checkbox .label::before {
+        margin-right: 5px; } }
+    @media (max-width: 350px) {
+      .input-checkbox .label::before {
+        width: 10px;
+        height: 10px;
+        background-size: contain; } }
   .input-checkbox .label::after {
     position: absolute;
     top: -4px;
@@ -149,6 +228,17 @@ label,
     width: 21px;
     height: 27px;
     background: URL("../-common/img/checkbox-check.png") no-repeat center center; }
+    @media (max-width: 440px) {
+      .input-checkbox .label::after {
+        top: -10px;
+        left: 2px; } }
+    @media (max-width: 350px) {
+      .input-checkbox .label::after {
+        top: 2px;
+        left: -2px;
+        width: 14px;
+        height: 14px;
+        background-size: contain; } }
 
 .input-date {
   position: relative;
@@ -168,31 +258,14 @@ label,
       width: 100%;
       max-width: 205px;
       background-color: #4b1a4d; }
+      @media (max-width: 600px) {
+        .input-date .input-wrapper::before {
+          max-width: 140px; } }
     .input-date .input-wrapper .input {
       border: none;
       background: none;
       height: 45px;
       padding-left: 10px; }
-
-.line {
-  position: absolute;
-  background-color: #4b1a4d; }
-  .line.line-1 {
-    left: 0;
-    width: 2px;
-    height: 26px; }
-  .line.line-2 {
-    left: 19.5%;
-    width: 2px;
-    height: 14px; }
-  .line.line-3 {
-    left: 48.7%;
-    width: 2px;
-    height: 14px; }
-  .line.line-last {
-    right: 0;
-    width: 2px;
-    height: 26px; }
 
 .noUi-handle {
   margin-top: -15px;

@@ -1,18 +1,18 @@
 @import '../../../assets/css/utils/_fonts.scss';
 @import '../../../assets/css/utils/_vars.scss';
 
-.center-line-temporality {
-  position: fixed;
-  z-index: 2000;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -50%);
+// .center-line-temporality {
+//   position: fixed;
+//   z-index: 2000;
+//   left: 50%;
+//   top: 0;
+//   transform: translate(-50%, -50%);
 
-  width: 0;
-  height: 600vw;
-  border-left: 1px dashed green;
-  border-right: 1px dashed red;
-}
+//   width: 0;
+//   height: 600vw;
+//   border-left: 1px dashed green;
+//   border-right: 1px dashed red;
+// }
 
 body {
   -webkit-font-smoothing: antialiased;
